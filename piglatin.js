@@ -1,3 +1,7 @@
+if(typeof Translator === "undefined") {
+		var Translator = (function(){return {
+		}})();
+	}
 var pigLatin = (function(Translator){
 var pigLatinWords = {"Merry":"Errymay", "Christmas":"Hristmascay", "and":"ndaay", "Happy":"Appyhay", "New":"ewnay", "Year":"earyay"};
 

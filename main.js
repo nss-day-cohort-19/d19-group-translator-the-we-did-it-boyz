@@ -16,7 +16,7 @@ function translate(event) {
 
 	if(spanbtn.checked) {
 		translation = Translator.translateSpanish(messageArray);
-		speech= responsiveVoice.speak(translation);
+		speech= responsiveVoice.speak(translation, "Korean Female");
 	} else if(pigbtn.checked) {
 		translation = Translator.translatePigLatin(messageArray);
 		speech= responsiveVoice.speak(translation);

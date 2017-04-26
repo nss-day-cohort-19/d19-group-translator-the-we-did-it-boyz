@@ -1,8 +1,11 @@
-var Translator = (function(){
+if(typeof Translator === "undefined") {
+		var Translator = (function(){return {
+		}})();
+	}
+var Spanish = (function(Translator){
 	var spanishWords = {"merry": "alegre", "christmas": "navidad", "and": "y", "happy": "feliz", "new":"nuevo", "year": "ano"};
 
-	return {
-		translateSpanish: function (message) {
+	Translator.translateSpanish = function (message) {
 			var newMessage=[""];
 			for(word in message) {
 				var translated = false;
@@ -22,5 +25,4 @@ var Translator = (function(){
 			});
 			return newMessage;
 		}
-	}
-})();
+})(Translator);
