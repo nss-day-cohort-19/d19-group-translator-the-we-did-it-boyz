@@ -1,27 +1,24 @@
-var pigLatin= (function(Translator){
-var pigLatinWords = [["merry","errymay"], ["christmas","hristmascay"], ["and","ndaay"], ["happy","appyhay"], ["new","ewnay"], ["year","earyay"]];
-
+var pigLatin = (function(Translator){
+var pigLatinWords = {"Merry":"Errymay", "Christmas":"Hristmascay", "and":"ndaay", "Happy":"Appyhay", "New":"ewnay", "Year":"earyay"};
 
 		Translator.translatePigLatin= function (message) {
-			var newMessage=[];
+			var newMessage=[""];
 			for(word in message) {
-				for (var i = 0; i < pigLatinWords.length; i++) {
-					console.log(message[word], pigLatinWords[i][1]);
-					if(pigLatinWords[i][0] == message[word]) {
-						newMessage.push(pigLatinWords[i][1]);
-						console.log(word);
+				var translated = false;
+				for(var key in pigLatinWords) {
+					if(key == message[word]) {
+						newMessage.push(pigLatinWords[key]);
+						translated = true;
 						break;
 					}
 				}
+				if(!translated) {
+					newMessage.push(message[word]);
+				}
 			}
-			console.log(newMessage);
-			var message2 = newMessage.reduce(function(a, b) {
-
+			newMessage = newMessage.reduce(function(a, b) {
 				return a + " " + b;
 			});
-			return message2;
+			return newMessage;
 		}
-
 })(Translator);
-
-
