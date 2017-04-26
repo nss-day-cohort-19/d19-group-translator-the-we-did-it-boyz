@@ -1,8 +1,7 @@
-var Translator = (function(){
-	var germanwords = [["merry", "Frohe"], ["Chirstmas","Weihnachten"], ["and a", "und ein"], ["happy", "gutes"], ["new", "neues"], ["year", "Jahr"]];
+var german = (function(Translator){
+	var germanwords = [["merry", "Frohe"], ["christmas","Weihnachten"], ["and a", "und ein"], ["happy", "gutes"], ["new", "neues"], ["year", "Jahr"]];
 
-	return {
-		translateGerman: function(msg){
+		Translator.translateGerman = function(msg){
 			var translatedMsg = [""];
 			for (x in msg){
 				for (var i = 0; i < germanwords.length; i++) {
@@ -18,5 +17,4 @@ var Translator = (function(){
 			  })
 			  	return germanTranslation;
 		}
-	}
 })(Translator);
