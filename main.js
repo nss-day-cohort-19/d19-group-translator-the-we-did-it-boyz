@@ -23,13 +23,13 @@ function translate(event) {
 		speech= responsiveVoice.speak(translation, "Korean Female");
 	} else if(pigbtn.checked) {
 		translation = Translator.translatePigLatin(messageArray);
-		speech= responsiveVoice.speak(translation);
+		speech= responsiveVoice.speak(translation, "UK English Male");
 	} else if(germbtn.checked) {
 		translation = Translator.translateGerman(messageArray);
-		speech= responsiveVoice.speak(translation);
+		speech= responsiveVoice.speak(translation, "Deutsch Female");
 	} else if(binbtn.checked) {
 		translation = Translator.translateBinary(messageArray);
-		speech= responsiveVoice.speak(translation);
+		speech= responsiveVoice.speak(translation, "UK English Male");
 
 	} else {
 		translation = "Select a language to translate to";
