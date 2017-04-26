@@ -1,5 +1,8 @@
 var german = (function(Translator){
 	var germanwords = [["merry", "Frohe"], ["christmas","Weihnachten"], ["and a", "und ein"], ["happy", "gutes"], ["new", "neues"], ["year", "Jahr"]];
+	var germanArray = Object.keys(germanwords).map(function(y){
+		return [String(y), germanwords[y]];
+	});
 
 		Translator.translateGerman = function(msg){
 			var translatedMsg = [""];
