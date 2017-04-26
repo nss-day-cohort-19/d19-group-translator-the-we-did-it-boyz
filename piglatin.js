@@ -3,7 +3,7 @@ if(typeof Translator === "undefined") {
 		}})();
 	}
 var pigLatin = (function(Translator){
-var pigLatinWords = {"Merry":"Errymay", "Christmas":"Hristmascay", "and":"ndaay", "Happy":"Appyhay", "New":"ewnay", "Year":"earyay"};
+var pigLatinWords = {"merry":"Errymay", "christmas":"Hristmascay", "and":"ndaay", "happy":"Appyhay", "new":"ewnay", "year":"earyay"};
 
 		Translator.translatePigLatin= function (message) {
 			var newMessage=[""];
