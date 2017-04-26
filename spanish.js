@@ -5,18 +5,17 @@ var Translator = (function(){
 		translateSpanish: function (message) {
 			var newMessage=[""];
 			for(word in message) {
+				var translated = false;
 				for(var key in spanishWords) {
-					if(String(spanishWords(key) == message[word])) {
-						newMessage.push(spanishWords(key).value);
+					if(key == message[word]) {
+						newMessage.push(spanishWords[key]);
+						translated = true;
 						break;
 					}
 				}
-				// for (var i = 0; i < words.length; i++) {
-				// 	if(words[i][0] == message[word]) {
-				// 		newMessage.push(words[i][1]);
-				// 		break;
-				// 	}
-				// }
+				if(!translated) {
+					newMessage.push(message[word]);
+				}
 			}
 			newMessage = newMessage.reduce(function(a, b) {
 				return a + " " + b;
