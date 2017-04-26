@@ -9,7 +9,7 @@ let binbtn = document.getElementById('binary');
 submitbtn.addEventListener("click", translate);
 
 function translate(event) {
-	var newString = input.value;
+	var newString = input.value.toLowerCase();
 	var messageArray = newString.split(" ");
 	var translation;
 
