@@ -1,8 +1,4 @@
-if(typeof Translator === "undefined") {
-		var Translator = (function(){return {
-		}})();
-	}
-var German = (function(Translator){
+var Translator = (function(Translator){
 
 	var germanwords = {"merry": "Frohe", "christmas": "Weihnachten", "and": "und", "a": "ein", "happy": "gutes", "new": "neues", "year": "Jahr"};
 
@@ -27,5 +23,5 @@ var German = (function(Translator){
 	});
 		  	return newMessage;
 	}
-
-})(Translator);
+	return Translator;
+}(Translator || {}));
