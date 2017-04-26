@@ -3,14 +3,20 @@ var Translatorgerman = (function(){
 
 	return {
 		translateGerman: function(msg){
-			var translatedMsg;
+			var translatedMsg = [];
 			for (x in msg){
 				for (var i = 0; i < germanwords.length; i++) {
+					console.log(x, germanwords[i]);
 					if(germanwords[i][0] == x){
-					 translatedMsg.push(germanwords[i](0));
+					 	translatedMsg.push(germanwords[i](0));
+						console.log("german words", x);
 					}
 				}
-			}
+			} console.log(translatedMsg);
+			  var germanTranslation = translatedMsg.reduce(function(a, b){
+			  	return a + " " + b;
+			  })
+			  	return germanTranslation;
 		}
 	}
 })();

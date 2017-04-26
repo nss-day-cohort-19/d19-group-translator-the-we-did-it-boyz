@@ -1,4 +1,4 @@
-// var input = document.getElementById('input');
+var input = document.getElementById('input');
 // var output = document.getElementById('output');
 // let submitbtn = document.getElementById('translatebtn');
 
@@ -9,3 +9,8 @@
 // }
 messageArray = ["happy", "new", "year"];
 console.log(Translator.translateSpanish(messageArray));
+
+
+//German translation//
+
+console.log(Translatorgerman.translateGerman(messageArray));
