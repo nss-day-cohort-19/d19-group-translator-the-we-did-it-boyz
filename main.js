@@ -5,8 +5,12 @@ let spanbtn = document.getElementById('spanish');
 let pigbtn = document.getElementById('piglatin');
 let germbtn = document.getElementById('german');
 let binbtn = document.getElementById('binary');
+const shutbtn= document.getElementById('shutup');
 
 submitbtn.addEventListener("click", translate);
+shutbtn.addEventListener('click', function(){
+	responsiveVoice.cancel();
+});
 
 function translate(event) {
 	var newString = input.value.toLowerCase();
