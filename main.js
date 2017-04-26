@@ -12,15 +12,21 @@ function translate(event) {
 	var newString = input.value.toLowerCase();
 	var messageArray = newString.split(" ");
 	var translation;
+	var speech;
 
 	if(spanbtn.checked) {
 		translation = Translator.translateSpanish(messageArray);
+		speech= responsiveVoice.speak(translation);
 	} else if(pigbtn.checked) {
 		translation = Translator.translatePigLatin(messageArray);
+		speech= responsiveVoice.speak(translation);
 	} else if(germbtn.checked) {
 		translation = Translator.translateGerman(messageArray);
+		speech= responsiveVoice.speak(translation);
 	} else if(binbtn.checked) {
 		translation = Translator.translateBinary(messageArray);
+		speech= responsiveVoice.speak(translation);
+
 	} else {
 		translation = "Select a language to translate to";
 	}
